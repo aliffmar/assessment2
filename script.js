@@ -51,12 +51,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
             cardDiv.querySelector(".edit-btn").addEventListener("click", function() {
                 const movieId = this.getAttribute("data-id");
-                
+                            
                 const newMovieTitle = prompt("Please enter the new movie title: ", m.title);
                 const newMovieRating = prompt("Please enter the new movie rating", m.rating);
-
-                modifyMovie(movies, movieId, newMovieTitle, newMovieRating);
-                renderMovies(movies);
+            
+                if (newMovieTitle && newMovieTitle.trim() !== '' && newMovieRating !== null && newMovieRating.trim() !== '') {
+                    modifyMovie(movies, movieId, newMovieTitle, newMovieRating);
+                    renderMovies(movies);
+                } else {
+                    alert('Please provide valid inputs!');
+                }
             });
 
             cardDiv.querySelector(".delete-btn").addEventListener("click", function() {

@@ -6,7 +6,7 @@ body {
 .container {
   max-width: 800px;
   margin: 50px auto;
-  background-color: #ee0606;
+  background-color: azure;
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
